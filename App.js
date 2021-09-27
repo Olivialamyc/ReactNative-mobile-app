@@ -1,14 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Pressable } from 'react-native';
+import LoginScreen from './src/login/login.js'
+import Icon from 'react-native-ico-material-design';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+const IconHeight = 26;
+const IconWidth = 26;
+
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <View>
+      <Icon name="add-plus-button" height="40" width="40" />
+      <LoginScreen />
+
+      </View>
+
+    );
+  }
 }
 
 const styles = StyleSheet.create({
